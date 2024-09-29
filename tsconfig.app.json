@@ -3,15 +3,22 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "target":"ES5",
+    "module": "ES2022",
+    "skipLibCheck": true,
     "outDir": "./out-tsc/app",
     "types": [
       "node"
     ]
   },
+  "exclude":[
+    "node_modules"
+  ],
   "files": [
     "src/main.ts",
     "src/main.server.ts",
-    "server.ts"
+    "server.ts",
+    //"typings/tsd.d.ts"
   ],
   "include": [
     "src/**/*.d.ts"

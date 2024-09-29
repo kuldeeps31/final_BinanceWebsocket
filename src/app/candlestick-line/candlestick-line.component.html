@@ -1,0 +1,39 @@
+
+  <div style="background-color: rgba(19, 69, 54, 0.178); height: 650px;">
+    
+<h1 style="text-align: center; margin-top: 3%;">Binance Market Data WebSocket</h1>
+<div class="controls">
+  
+    
+    <select (change)="switchSymbol($event)">
+      <option value="ethusdt">ETH/USDT</option>
+      <option value="bnbusdt">BNB/USDT</option>
+      <option value="dotusdt">DOT/USDT</option>
+    </select>
+  
+    <select (change)="switchInterval($event)">
+      <option value="1m">1 Minute</option>
+      <option value="3m">3 Minutes</option>
+      <option value="5m">5 Minutes</option>
+    </select>
+  
+
+  </div>
+  <h2 style="text-align: center; color: rgba(26, 24, 22, 0.674);">It will take some time to Load the Data..</h2>
+  <div class="loader" *ngIf="isLoading"></div> 
+<div class="chart"  *ngIf="!isLoading"> 
+    
+    <canvas id="candlestickChart"></canvas>
+</div> 
+
+  </div>
+  <div class="fo">
+      
+    <div class="icons"  style="margin-left: 50%; color: rgb(15, 15, 15);">
+      <i class="fa fa-facebook" style="margin-right: 9px; margin-top: 20px ;"></i>
+      <i class="fa fa-instagram"  style="margin-right: 9px"></i>
+      <i class="fa fa-twitter"   style="margin-right: 9px"></i>
+      <i class="fa fa-linkedin"   style="margin-right: 9px"></i>
+     
+  </div>
+  <p style="text-align: center; font-size: 13px; color: rgb(12, 12, 12);" >Made with <i class="fa fa-heart "></i> by kuldeep singh chouhan</p>
